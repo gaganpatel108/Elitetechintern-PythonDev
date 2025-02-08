@@ -1,0 +1,24 @@
+#simple email slicer that extracts the username and domain from an email address.
+#Python Email Slicer
+
+def email_slicer(email):
+    try:
+        username, domain = email.split('@')
+        return f"Username: {username}\nDomain: {domain}"
+    except ValueError:
+        return "Invalid email format! Please enter a valid email address."
+
+# Get user input
+email = input("Enter your email: ").strip()
+
+# Print the result
+print(email_slicer(email))
+
+#Example Usage:
+
+#Enter your email: example@gmail.com
+#Username: example
+#Domain: gmail.com
+
+#This script ensures that even if the user inputs spaces, they are removed using .strip(). If an invalid email format is entered (e.g., missing '@'), the script will handle the error gracefully.
+
