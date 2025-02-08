@@ -1,0 +1,22 @@
+#Every time a user runs the code,a random story generator project tries to produce different and random story.
+import random
+
+# Lists of possible elements
+characters = ["a brave knight", "a clever detective", "a young wizard", "a curious scientist", "a space explorer"]
+settings = ["in an enchanted forest", "inside a haunted house", "on a distant planet", "in an underground city", "at a secret laboratory"]
+conflicts = ["faced a terrible dragon", "discovered a hidden treasure", "solved a mysterious crime", "invented a time machine", "got trapped in a time loop"]
+outcomes = ["and became a legend", "but was never seen again", "and changed history forever", "and saved the world", "but uncovered a deeper mystery"]
+
+# Generate a random story
+def generate_story():
+    character = random.choice(characters)
+    setting = random.choice(settings)
+    conflict = random.choice(conflicts)
+    outcome = random.choice(outcomes)
+    
+    story = f"One day, {character} found themselves {setting}. They {conflict} {outcome}."
+    return story
+
+# Run the generator
+if __name__ == "__main__":
+    print(generate_story())
