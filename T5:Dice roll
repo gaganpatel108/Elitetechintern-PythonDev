@@ -1,0 +1,7 @@
+import random
+
+def roll_die():
+    return random.randint(1, 6)  # Generates a random number between 1 and 6
+
+# Run the die roll simulator
+print(f"You rolled a {roll_die()}!")
