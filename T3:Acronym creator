@@ -1,0 +1,15 @@
+#An Acronym Creator takes a phrase or sentence and generates an acronym using the first letter of each word.
+
+#Python Program: Acronym Creator
+
+def create_acronym(phrase):
+    words = phrase.split()  # Split phrase into words
+    acronym = "".join(word[0].upper() for word in words)  # Take first letter of each word and capitalize
+    return acronym
+
+# Get user input
+phrase = input("Enter a phrase: ")
+acronym = create_acronym(phrase)
+
+# Display the acronym
+print(f"Acronym: {acronym}")
